@@ -1,0 +1,497 @@
+body {
+    margin: 0 auto;
+  }
+  
+  /* 데스크탑 요소 삭제 */
+  #desktop-header {
+    display: none;
+  }
+  #sub-container {
+    display: none;
+  }
+  
+  /* 헤더 */
+  #mobile-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    /* fixed 를 쓰면 부모의 width 영향을 받지 않는다 */
+    width: 100%;
+    position: fixed;
+    max-width: 860px;
+    border-bottom: 1px solid lightgray;
+  }
+  #mobile-header .header-icon {
+    /* 여기서 margin 의 % 는 너비(width)를 기준으로 합니다! */
+    margin: 3% 5%;
+    width: 6%;
+  }
+  #mobile-header #logo {
+    width: 27%;
+  }
+  
+  /* 컨테이너 */
+  #container {
+    padding-top: 12%;
+    padding-bottom: 12%;
+  }
+  
+  /* 스토리 */
+  #story-container {
+    padding-left: 1%;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid lightgray;
+  }
+  .story-wrapper {
+    width: auto;
+    margin: 2.5% 3.2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .story-wrapper .story-on {
+    width: 13vw;
+    max-width: 80px;
+    max-height: 80px;
+    height: 13vw;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(#f6f6f6, #f6f6f6),
+      linear-gradient(to right, #ff7700, #ff3636aa, #ff00c3);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  }
+  .story-wrapper .story-off {
+    width: 13vw;
+    max-width: 80px;
+    max-height: 80px;
+    height: 13vw;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(#f6f6f6, #f6f6f6),
+      linear-gradient(#c4c4c4, #c4c4c4);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  }
+  .story-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .story-wrapper p {
+    margin-top: 10%;
+    margin-bottom: 0%;
+    font-size: 12px;
+  }
+  
+  /* 포스트 - 공통 */
+  .left-wrapper {
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* img 의 height 를 % 로 주고 싶다면, 부모에 height 가 명시되어있어야 한다. */
+  }
+  .right-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-right: 3%;
+  }
+  
+  /* 포스트 - 헤더 */
+  .post-header {
+    margin: 1% 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .post-header .left-wrapper img {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    margin: 0 2%;
+  }
+  .post-header .left-wrapper p {
+    margin-left: 2%;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  /* 포스트 - 바디 */
+  .post-body img {
+    width: 100%;
+  }
+  .post-body .post-icons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1%;
+  }
+  /* 아이콘 크기가 달라서 부득이 하게 이렇게 만들었으나, 그냥 img 로 처리하는게 맞습니다! */
+  .post-body .post-icons-wrapper .left-wrapper .post-icon {
+    margin: 2% 4%;
+    width: 14%;
+  }
+  .post-body .post-icons-wrapper .left-wrapper .post-icon-2 {
+    margin: 2% 4%;
+    width: 13%;
+  }
+  .post-body .post-icons-wrapper .right-wrapper img {
+    margin: 2% 4%;
+    width: 11%;
+  }
+  
+  /* 포스트 - 푸터 */
+  .post-footer {
+    padding-left: 2%;
+  }
+  .post-footer .post-like-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  .post-footer .post-like-wrapper img {
+    width: 3vw;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    margin: 0 1%;
+  }
+  .post-footer .post-like-wrapper p {
+    margin-bottom: 2%;
+    margin-top: 2%;
+    font-size: 14px;
+  }
+  .post-footer .post-content-wrapper {
+    display: flex;
+  }
+  .post-footer .post-content-wrapper .post-author {
+    margin: 0% 2% 0% 2%;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .post-footer .post-content-wrapper .post-content {
+    margin: 0%;
+    font-size: 14px;
+  }
+  .post-footer .post-time {
+    color: gray;
+    font-size: 10px;
+    margin-left: 2%;
+    margin-top: 5%;
+  }
+  
+  /* 푸터 */
+  #footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 720px;
+    border-top: 1px solid lightgray;
+    background-color: white;
+  }
+  #footer #icon-wrapper {
+    margin: 4% 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #footer #icon-wrapper img {
+    width: 6%;
+  }
+  
+/* 모달창 */
+.modal_overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(1.5px);
+	-webkit-backdrop-filter: blur(1.5px);
+}
+
+.modal_window {
+	background: white;
+	backdrop-filter: blur(13.5px);
+	-webkit-backdrop-filter: blur(13.5px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	width: 800px;
+	height: 600px;
+	position: relative;
+	padding: 10px;
+}
+
+.feed_upload{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.img_upload_space{
+	width: 798px;
+	height: 573px;
+	margin-top: 7px;
+	border: solid lightgray;
+}
+
+.text_upload_space{
+	width: 500px;
+	height: 573px;
+	margin-top: 7px;
+	border: solid lightgray;
+	
+}
+
+
+
+@media (min-width: 860px){
+	#footer {
+		display: none;
+	  }
+	  #mobile-header {
+		display: none;
+	  }
+	  
+	  /* 헤더 */
+	  #desktop-header {
+		background-color: white;
+		width: 100%;
+		position: fixed;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 1px solid lightgray;
+	  }
+	  #desktop-header #desktop-header-wrapper {
+		max-width: 950px;
+		padding: 10px 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	  }
+	  
+	  /* 헤더 - 로고 */
+	  #desktop-header-wrapper #logo-wrapper {
+		width: 33.3%;
+	  }
+	  #desktop-header-wrapper #logo-wrapper img {
+		width: 40%;
+		height: 40%;
+	  }
+	  
+	  /* 헤더 - 검색 */
+	  #desktop-header-wrapper #search-wrapper {
+		margin: 0 5%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		color: gray;
+		width: 33.3%;
+		height: 34px;
+		border: 1px solid lightgray;
+		background-color: rgba(215, 215, 215, 0.1);
+		border-radius: 3px;
+		padding-left: 15px;
+	  }
+	  #desktop-header-wrapper #search-wrapper img {
+		width: 4%;
+		opacity: 0.5;
+	  }
+	  #desktop-header-wrapper #search-wrapper p {
+		margin-left: 2%;
+		font-size: 13px;
+	  }
+	  
+	  /* 헤더 - 아이콘 */
+	  #desktop-header-wrapper #header-icon-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: 33.3%;
+	  }
+	  #desktop-header-wrapper #header-icon-wrapper img {
+		margin: 0% 3.5%;
+		width: 8%;
+	  }
+	  
+	  /* 컨테이너 */
+	  #container {
+		padding-top: 95px;
+		padding-bottom: 0%;
+		background-color: rgba(215, 215, 215, 0.1);
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+	  }
+	  
+	  /* 메인 컨테이너 */
+	  #main-container {
+		max-width: 660px;
+		margin-right: 40px;
+	  }
+	  
+	  /* 스토리 컨테이너 */
+	  #story-container {
+		padding-left: 10px;
+		border: 1px solid lightgray;
+		background-color: white;
+		width: 600px;
+	  }
+	  #story-container .story-wrapper {
+		margin: 3% 1.5%;
+	  }
+	  #story-container .story-off {
+		width: 55px;
+		height: 55px;
+	  }
+	  #story-container .story-on {
+		width: 55px;
+		height: 55px;
+	  }
+	  
+	  /* 포스트 컨테이너 */
+	  #post-container {
+		margin-top: 25px;
+		width: 610px;
+	  }
+	  #post-container .post-wrapper {
+		border: 1px solid lightgray;
+		margin-bottom: 5%;
+	  }
+	  
+	  /* 포스트 - 헤더 */
+	  #post-container .post-wrapper .post-header .left-wrapper {
+		margin-left: 1%;
+	  }
+	  #post-container .post-wrapper .post-header .left-wrapper img {
+		width: 3vw;
+		height: 3vw;
+	  }
+	  #post-container .post-wrapper .post-header .right-wrapper img {
+		width: 7%;
+	  }
+	  
+	  /* 포스트 - 바디 */
+	  #post-container .post-wrapper .post-body .post-icons-wrapper .left-wrapper {
+		margin-left: 1%;
+	  }
+	  #post-container
+		.post-wrapper
+		.post-body
+		.post-icons-wrapper
+		.left-wrapper
+		.post-icon {
+		width: 9%;
+	  }
+	  #post-container
+		.post-wrapper
+		.post-body
+		.post-icons-wrapper
+		.left-wrapper
+		.post-icon-2 {
+		width: 8%;
+	  }
+	  #post-container
+		.post-wrapper
+		.post-body
+		.post-icons-wrapper
+		.right-wrapper
+		img {
+		width: 7%;
+	  }
+	  
+	  /* 포스트 - 푸터 */
+	  #post-container .post-wrapper .post-footer {
+		padding-left: 1%;
+	  }
+	  #post-container .post-wrapper .post-footer .post-like-wrapper img {
+		width: 2vw;
+	  }
+	  
+	  /* 서브 컨테이너 */
+	  #sub-container {
+		display: flex;
+		flex-direction: column;
+		width: 275px;
+	  }
+	  
+	  /* 친구 아이콘 - 헤더 */
+	  #sub-container #sub-icon-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	  }
+	  #sub-container #sub-icon-header #sub-header-text {
+		font-size: 14px;
+		font-weight: bold;
+		color: gray;
+	  }
+	  #sub-container #sub-icon-header #sub-header-text-2 {
+		font-size: 12px;
+		font-weight: bold;
+	  }
+	  
+	  /* 친구 아이콘 - 아이템 */
+	  #sub-container #sub-icon-wrapper .sub-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	  }
+	  #sub-container #sub-icon-wrapper .sub-item .sub-item-user {
+		display: flex;
+		align-items: center;
+	  }
+	  #sub-container #sub-icon-wrapper .sub-item .sub-item-user img {
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+	  }
+	  #sub-container #sub-icon-wrapper .sub-item .sub-item-user .sub-item-text {
+		margin: 0 5px;
+	  }
+	  #sub-container
+		#sub-icon-wrapper
+		.sub-item
+		.sub-item-user
+		.sub-item-text
+		.sub-item-name {
+		font-size: 14px;
+		font-weight: bold;
+		margin: 3px 3px;
+	  }
+	  #sub-container
+		#sub-icon-wrapper
+		.sub-item
+		.sub-item-user
+		.sub-item-text
+		.sub-item-follower {
+		font-size: 12px;
+		color: gray;
+		margin: 0 3px;
+	  }
+	  #sub-container #sub-icon-wrapper .sub-item .sub-item-button {
+		font-size: 12px;
+		font-weight: bold;
+		color: rgb(0, 123, 255);
+	  }
+	  
+}

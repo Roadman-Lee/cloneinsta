@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Instagram</title>
+</head>
+
+
+<body>
+    <div id="main">
+        <!-- 모바일 헤더와 데스크탑 헤더를 따로 작성하고, 사이즈 별로 display 속성을 변경시키는 방식으로 진행 -->
+        <div id="mobile-header">
+            <img class="header-icon" src="/static/img/camera@3x.png" />
+            <img id="logo" src="/static/img/insta-logo.png" />
+            <img class="header-icon" src="/static/img/dm@3x.png" />
+        </div>
+        <div id="desktop-header">
+            <div id="desktop-header-wrapper">
+                <div id="logo-wrapper">
+                    <img src="/static/img/insta-logo.png" />
+                </div>
+                <div id="search-wrapper">
+                    <img src="/static/img/search@3x.png">
+                    <p>검색</p>
+                </div>
+                <div id="header-icon-wrapper">
+                    <img class="header-icon" src="/static/img/home@3x.png" />
+                    <img class="header-icon" src="/static/img/dm@3x.png" />
+                    <img class="header-icon" id="upload" src="/static/img/trending@3x.png" />
+                    <img class="header-icon" src="/static/img/like@3x.png" />
+                    <img class="header-icon" src="/static/img/more@3x.png" />
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            <div id="main-container">
+                <div id="story-container">
+                    <div class="story-wrapper">
+                        <div class="story-off">
+                            <img src="/static/img/xmas.jpg" />
+                        </div>
+                        <p>내 스토리</p>
+                    </div>
+                    <div class="story-wrapper">
+                        <div class="story-on">
+                            <img src="/static/img/xmas.jpg" />
+                        </div>
+                        <p>내 스토리</p>
+                    </div>
+                    <div class="story-wrapper">
+                        <div class="story-on">
+                            <img src="/static/img/xmas.jpg" />
+                        </div>
+                        <p>내 스토리</p>
+                    </div>
+                    <div class="story-wrapper">
+                        <div class="story-off">
+                            <img src="/static/img/xmas.jpg" />
+                        </div>
+                        <p>내 스토리</p>
+                    </div>
+                    <div class="story-wrapper">
+                        <div class="story-off">
+                            <img src="/static/img/xmas.jpg" />
+                        </div>
+                        <p>내 스토리</p>
+                    </div>
+                    <div class="story-wrapper">
+                        <div class="story-off">
+                            <img src="/static/img/xmas.jpg" />
+                        </div>
+                        <p>내 스토리</p>
+                    </div>
+                    <div class="story-wrapper">
+                        <div class="story-off">
+                            <img src="/static/img/xmas.jpg" />
+                        </div>
+                        <p>내 스토리</p>
+                    </div>
+                    <div class="story-wrapper">
+                        <div class="story-off">
+                            <img src="/static/img/xmas.jpg" />
+                        </div>
+                        <p>내 스토리</p>
+                    </div>
+                    <div class="story-wrapper">
+                        <div class="story-off">
+                            <img src="/static/img/xmas.jpg" />
+                        </div>
+                        <p>내 스토리</p>
+                    </div>
+                    <div class="story-wrapper">
+                        <div class="story-off">
+                            <img src="/static/img/xmas.jpg" />
+                        </div>
+                        <p>내 스토리</p>
+                    </div>
+                </div>
+                <div id="post-container">
+                    <div class="post-wrapper">
+                        <div class="post-header">
+                            <div class="left-wrapper">
+                                <img src="/static/img/xmas.jpg" />
+                                <p>이용자5</p>
+                            </div>
+                            <div class="right-wrapper">
+                                <img src="/static/img/more@3x.png">
+                            </div>
+                        </div>
+                        <div class="post-body">
+                            <img src="/static/img/xmas.jpg">
+                            <div class="post-icons-wrapper">
+                                <div class="left-wrapper">
+                                    <!-- 아이콘 크기가 달라서 부득이 하게 이렇게 만들었으나, 클래스 없이 img로 처리하는게 맞습니다! -->
+                                    <img class="post-icon" src="/static/img/like@3x.png">
+                                    <img class="post-icon-2" src="/static/img/comment@3x.png">
+                                    <img class="post-icon" src="/static/img/dm@3x.png">
+                                </div>
+                                <div class="right-wrapper">
+                                    <img src="/static/img/favorite@3x.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-like-wrapper">
+                                <img src="/static/img/xmas.jpg">
+                                <p><strong>이용자</strong>님 <strong>외 6,671명</strong>이 좋아합니다</p>
+                            </div>
+                            <div class="post-content-wrapper">
+                                <p class="post-author">이용자</p>
+                                <p class="post-content">안녕하세요</p>
+                            </div>
+                            <p class="/static/post-time">
+                                8시간 전
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post-wrapper">
+                        <div class="post-header">
+                            <div class="left-wrapper">
+                                <img src="/static/img/xmas.jpg" />
+                                <p>이용자5</p>
+                            </div>
+                            <div class="right-wrapper">
+                                <img src="/static/img/more@3x.png">
+                            </div>
+                        </div>
+                        <div class="post-body">
+                            <img src="/static/img/xmas.jpg">
+                            <div class="post-icons-wrapper">
+                                <div class="left-wrapper">
+                                    <!-- 아이콘 크기가 달라서 부득이 하게 이렇게 만들었으나, 클래스 없이 img로 처리하는게 맞습니다! -->
+                                    <img class="post-icon" src="/static/img/like@3x.png">
+                                    <img class="post-icon-2" src="/static/img/comment@3x.png">
+                                    <img class="post-icon" src="/static/img/dm@3x.png">
+                                </div>
+                                <div class="right-wrapper">
+                                    <img src="/static/img/favorite@3x.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-like-wrapper">
+                                <img src="/static/img/xmas.jpg">
+                                <p><strong>이용자</strong>님 <strong>외 6,671명</strong>이 좋아합니다</p>
+                            </div>
+                            <div class="post-content-wrapper">
+                                <p class="post-author">이용자</p>
+                                <p class="post-content">안녕하세요</p>
+                            </div>
+                            <p class="post-time">
+                                8시간 전
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sub-container">
+                <div id="sub-icon-header">
+                    <p id="sub-header-text">회원님을 위한 추천</p>
+                    <p id="sub-header-text-2">모두 보기</p>
+                </div>
+                <div id="sub-icon-wrapper">
+                    <div class="sub-item">
+                        <div class="sub-item-user">
+                            <img src="/static/img/xmas.jpg">
+                            <div class="sub-item-text">
+                                <p class="sub-item-name">이용자1</p>
+                                <p class="sub-item-follower">이용자님이 팔로우합니다</p>
+                            </div>
+                        </div>
+                        <p class="sub-item-button">팔로우</p>
+                    </div>
+                    <div class="sub-item">
+                        <div class="sub-item-user">
+                            <img src="/static/img/xmas.jpg">
+                            <div class="sub-item-text">
+                                <p class="sub-item-name">이용자1</p>
+                                <p class="sub-item-follower">이용자님이 팔로우합니다</p>
+                            </div>
+                        </div>
+                        <p class="sub-item-button">팔로우</p>
+                    </div>
+                    <div class="sub-item">
+                        <div class="sub-item-user">
+                            <img src="/static/img/xmas.jpg">
+                            <div class="sub-item-text">
+                                <p class="sub-item-name">이용자1</p>
+                                <p class="sub-item-follower">이용자님이 팔로우합니다</p>
+                            </div>
+                        </div>
+                        <p class="sub-item-button">팔로우</p>
+                    </div>
+                    <div class="sub-item">
+                        <div class="sub-item-user">
+                            <img src="/static/img/xmas.jpg">
+                            <div class="sub-item-text">
+                                <p class="sub-item-name">이용자1</p>
+                                <p class="sub-item-follower">이용자님이 팔로우합니다</p>
+                            </div>
+                        </div>
+                        <p class="sub-item-button">팔로우</p>
+                    </div>
+                    <div class="sub-item">
+                        <div class="sub-item-user">
+                            <img src="/static/img/xmas.jpg">
+                            <div class="sub-item-text">
+                                <p class="sub-item-name">이용자1</p>
+                                <p class="sub-item-follower">이용자님이 팔로우합니다</p>
+                            </div>
+                        </div>
+                        <p class="sub-item-button">팔로우</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal_overlay" id="first_modal">
+            <div class="modal_window">
+                <div class="feed_upload">
+                    <div>
+                        앞
+                    </div>
+                    <div>
+                        새 이미지 업로드
+                    </div>
+                    <div>
+                        <span class="material-icons-outlined">
+                            closes
+                        </span>
+                    </div>
+
+                </div>
+                <div class="img_upload_space">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal_overlay" id="second_modal">
+            <div class="modal_window">
+                <div class="feed_upload">
+                    <div>
+                        앞
+                    </div>
+                    <div>
+                        새 이미지 업로드
+                    </div>
+                    <div>
+                        <span class="material-icons-outlined">
+                            closes
+                        </span>
+                    </div>
+
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <form action="http://127.0.0.1:8000/api/upload" method="POST" enctype="multipart/form-data">
+                        <div class="text_upload_space" id="upload_img"></div>
+                        <div>
+                            <div>
+                                <textarea class="form-control" id="text" rows="3"></textarea>
+                            </div>
+                            <button type="submit" onclick="upload()">공유하기</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="icon-wrapper">
+                <img src="/static/img/home@3x.png">
+                <img src="/static/img/search@3x.png">
+                <img src="/static/img/trending@3x.png">
+                <img src="/static/img/like@3x.png">
+                <img src="/static/img/favorite@3x.png">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $('#upload').click(function () {
+        $('#first_modal').css({
+            display: 'flex'
+        });
+    })
+
+    $(document.body).css({
+        overflow: 'hidden'
+    });
+
+    $('.img_upload_space')
+        .on("dragover", dragOver)
+        .on("dragleave", dragOver)
+        .on("drop", uploadFiles);
+
+    function dragOver(e) {
+        e.stopPropagation();
+        e.preventDefault();
+
+        if (e.type == "dragover") {
+            $(e.target).css({
+                "background-color": "black",
+                "outline-offset": "-20px"
+            });
+        } else {
+            $(e.target).css({
+                "outline-offset": "-10px"
+            });
+        }
+    }
+
+    function uploadFiles(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        dragOver(e); //1
+
+        e.dataTransfer = e.originalEvent.dataTransfer; //2
+        var files = e.target.files || e.dataTransfer.files;
+        console.log("파일이 올라왔나?" + files)
+        if (files.length > 1) {
+            alert('하나만 올려라.');
+            return;
+        }
+
+        if (files[0].type.match(/image.*/)) {
+            $('#first_modal').css({
+                display: 'none'
+            });
+
+            $('#second_modal').css({
+                display: 'flex'
+            });
+
+            $('.text_upload_space').css({
+                "background-image": "url(" + window.URL.createObjectURL(files[0]) + ")",
+                "outline": "none",
+                "background-size": "100%",
+                "background-repeat": "no-repeat",
+                "background-position": "center"
+            });
+        } else {
+            alert('이미지가 아닙니다.');
+            return;
+        }
+    }
+
+    function upload() {
+        let text = $('#text').val()
+        let img = $('#upload_img')
+        let form_data = new FormData()
+        console.log(img)
+        form_data.append("text_give", text)
+        // form_data.append("img_give", img)
+        console.log(form_data)
+        // $.ajax({
+        //     type: "POST",
+        //     url: "/api/upload",
+        //     data: form_data,
+        //     cache: false,
+        //     contentType: false,
+        //     processData: false,
+        //     success: function (response) {
+        //         alert(response["result"])
+        //         window.location.reload()
+        //     }
+        // });
+    }
+
+</script>
+
+</html>
